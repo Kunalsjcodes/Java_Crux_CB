@@ -16,5 +16,4 @@ public class Simple_Input {
 				System.out.println(n);
 		}
 	}
-
 }
