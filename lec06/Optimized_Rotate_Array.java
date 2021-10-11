@@ -1,11 +1,18 @@
 package lec06;
 
+import java.util.Scanner;
+
 public class Optimized_Rotate_Array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-		int k = 3;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int [] arr = new int [n];
+		for (int i = 0; i < n; i++) {
+			arr[i]=sc.nextInt();
+		}
+		int k = sc.nextInt();
 		rotate(arr, k);
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
