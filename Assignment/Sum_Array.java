@@ -15,8 +15,8 @@ public class Sum_Array {
 			arr2[i]=arr[i];
 		}
 	    int sum = 0;  
-	    int q = sc.nextInt();
-	    while(q!=0) {
+	    int tc = sc.nextInt();
+	    while(tc!=0) {
 	    	int x = sc.nextInt();
 	    	for (int i=0; i<n; i++) {
 	    		if(i-x>=0) {
@@ -31,7 +31,7 @@ public class Sum_Array {
 	    	}
 	    	for(int i=0;i<n;i++)
 	    		arr2[i]=arr[i];
-	    	q--;
+	    	tc--;
 	    }
 	    
         for (int in = 0; in < n; in++) {  
