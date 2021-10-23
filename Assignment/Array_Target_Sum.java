@@ -1,5 +1,7 @@
 package Assignment;
+
 import java.util.*;
+
 public class Array_Target_Sum {
 
 	public static void main(String[] args) {
@@ -19,7 +21,6 @@ public class Array_Target_Sum {
 					if (arr[i] + arr[j] + arr[k] == ts) {
 						System.out.println(arr[i] + ", " + arr[j] + " and " + arr[k]);
 					}
-
 				}
 			}
 		}

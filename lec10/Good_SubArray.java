@@ -1,5 +1,4 @@
 package lec10;
-
 import java.util.*;
 
 public class Good_SubArray {
