@@ -1,4 +1,4 @@
-package lec11;
+package lec12;
 
 public class Divisible_Subarray {
 
