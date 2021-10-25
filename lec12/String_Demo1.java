@@ -1,6 +1,6 @@
 package lec12;
 
-public class Demo_String {
+public class String_Demo1 {
 	// :- String forms it's address in heap or in String pool
 	// :- If any string is created with new keyword then string will be created in heap
 	// with different locations.
@@ -18,6 +18,10 @@ public class Demo_String {
 		System.out.println(str);
 		System.out.println(str.length());
 
+		for (int i = 0; i < str.length(); i++) {
+			System.out.println(str.charAt(i));
+			
+		}
 	}
 
 }
