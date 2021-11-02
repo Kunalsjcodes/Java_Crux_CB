@@ -1,5 +1,7 @@
 package lec14;
+
 import java.util.*;
+
 public class Divisible_Good_Subarray {
 
 	public static void main(String[] args) {
@@ -39,7 +41,7 @@ public class Divisible_Good_Subarray {
 
 		for (int i = 0; i < ans.length; i++) {
 			if (ans[i] >= 2) {
-				int p = ans[i];
+				long p = ans[i];
 				res = res + (p * (p - 1)) / 2;
 
 			}

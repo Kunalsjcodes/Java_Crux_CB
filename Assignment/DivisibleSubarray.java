@@ -7,32 +7,46 @@ public class DivisibleSubarray {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		while (t > 0) {
+		while (t-- > 0) {
 			int n = sc.nextInt();
 			int[] arr = new int[n];
 			for (int i = 0; i < arr.length; i++) {
 				arr[i] = sc.nextInt();
 			}
-			System.out.println(no_good_subarray(arr));
-			t--;
+
+			DivisibleSubarrays(arr, n);
+
 		}
+
 	}
 
-	public static int no_good_subarray(int[] arr) {
-		int n = arr.length;
-		int ans = 0;
+	public static void DivisibleSubarrays(int[] arr, int n) {
+		// TODO Auto-generated method stub
+		int[] ans = new int[n];
+		int sum = 0;
+		ans[0] = 1;
 		for (int i = 0; i < arr.length; i++) {
-			long sum = 0;
-			for (int j = i; j < arr.length; j++) {
-				sum += arr[j];
-				if (sum % n == 0) {
-					ans++;
-				}
+			sum += arr[i];
+			sum = sum % n;
+			if (sum < 0) {
+				sum += n;
+
+			}
+
+			ans[sum]++;// ans[sum] = ans[sum]+1;
+
+		}
+		long res = 0;
+
+		for (int i = 0; i < ans.length; i++) {
+			if (ans[i] >= 2) {
+				long p = ans[i];
+				res = res + (p * (p - 1)) / 2;
 
 			}
 
 		}
-		return ans;
+		System.out.println(res);
 
 	}
 
