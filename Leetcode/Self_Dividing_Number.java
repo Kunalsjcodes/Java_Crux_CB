@@ -1,6 +1,6 @@
 package Leetcode;
 
-public class Self_Driving_Number {
+public class Self_Dividing_Number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
