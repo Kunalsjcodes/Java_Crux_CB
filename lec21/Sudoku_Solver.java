@@ -8,16 +8,18 @@ public class Sudoku_Solver {
 				{ 0, 0, 3, 0, 1, 0, 0, 8, 0 }, { 9, 0, 0, 8, 6, 3, 0, 0, 5 }, { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
 				{ 1, 3, 0, 0, 0, 0, 2, 5, 0 }, { 0, 0, 0, 0, 0, 0, 0, 7, 4 }, { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
 
+		Solver(grid, 0, 0);
 	}
 
 	public static void Solver(int[][] grid, int row, int col) {
-		if (row == 9) {
-			Display(grid);
-			return;
-		}
 		if (col == 9) {
 			col = 0;
 			row++;
+		}
+		
+		if (row == 9) {
+			Display(grid);
+			return;
 		}
 
 		if (grid[row][col] != 0) {
@@ -39,7 +41,36 @@ public class Sudoku_Solver {
 
 	private static boolean issafe(int[][] grid, int row, int col, int val) {
 		// TODO Auto-generated method stub
-		return false;
+		int c = 0;
+		// Row
+		while (c < 9) {
+			if (grid[row][c] == val) {
+				return false;
+			}
+			c++;
+		}
+
+		// Column
+		int r = 0;
+		while (r < 9) {
+			if (grid[r][col] == val) {
+				return false;
+			}
+			r++;
+		}
+
+		// 3x3 Matrix
+		r = row - row % 3;
+		c = col - col % 3;
+		for (int i = r; i < r + 3; i++) {
+			for (int j = c; j < c + 3; j++) {
+				if (grid[i][j] == val) {
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 
 	public static void Display(int[][] grid) {
