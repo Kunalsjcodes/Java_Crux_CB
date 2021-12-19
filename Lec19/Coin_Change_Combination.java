@@ -1,4 +1,4 @@
-package Lec19;
+package lec19;
 
 public class Coin_Change_Combination {
 
