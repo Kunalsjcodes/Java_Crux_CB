@@ -1,8 +1,8 @@
 package Self_Practice;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Equal_Different_Number {
+public class Increasing_Decreasing_Order {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,12 +14,12 @@ public class Equal_Different_Number {
 		System.out.print("Input third number:- ");
 		int c = sc.nextInt();
 
-		if (a == b && b == c) {
-			System.out.println("All numbers are equal");
-		} else if (a == b || b == c || a == c) {
-			System.out.println("Neither all are equal or different");
+		if (a < b && b < c) {
+			System.out.println("Increasing Order");
+		} else if (a > b && b > c) {
+			System.out.println("Decreasing Order");
 		} else {
-			System.out.println("All numbers are different");
+			System.out.println("Neither increasing or decreasing order");
 		}
 	}
 
