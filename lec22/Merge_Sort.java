@@ -27,7 +27,7 @@ public class Merge_Sort {
 
 	}
 
-	public static int[] mergetwosortedarray(int[] arr1, int arr2[]) {
+	public static int[] mergetwosortedarray(int[] arr1, int[] arr2) {
 		int[] ans = new int[arr1.length + arr2.length];
 
 		int i = 0;
@@ -53,7 +53,7 @@ public class Merge_Sort {
 		}
 		if (i == arr1.length) {
 			while (j < arr2.length) {
-				ans[k] = arr2[i];
+				ans[k] = arr2[j];
 				j++;
 				k++;
 			}

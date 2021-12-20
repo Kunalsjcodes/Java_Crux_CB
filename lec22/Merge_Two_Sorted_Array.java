@@ -40,7 +40,7 @@ public class Merge_Two_Sorted_Array {
 		}
 		if (i == arr.length) {
 			while (j < arr2.length) {
-				ans[k] = arr2[i];
+				ans[k] = arr2[j];
 				j++;
 				k++;
 			}
