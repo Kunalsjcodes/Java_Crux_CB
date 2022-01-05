@@ -13,8 +13,7 @@ public class Multiplication_Table {
 		int m = sc.nextInt();
 
 		for (int i = 0; i <= m; i++) {
-			System.out.println(n + " X " + i + " = " + n*i);
+			System.out.println(n + " X " + i + " = " + n * i);
 		}
 	}
-
 }
