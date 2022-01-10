@@ -2,7 +2,7 @@ package Self_Practice;
 
 import java.util.*;
 
-public class Number_Reverse_Order {
+public class Reverse_Number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
